@@ -1,33 +1,11 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Python Runner</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Base HTML Page</title>
 </head>
 <body>
-    <h1>Python Runner</h1>
-    <form>
-        <textarea id="code" placeholder="Enter your Python code here..."></textarea>
-        <button id="run-btn">Run</button>
-        <pre id="output"></pre>
-    </form>
-
-    <script>
-        const runBtn = document.getElementById('run-btn');
-        const codeTextarea = document.getElementById('code');
-        const outputPre = document.getElementById('output');
-
-        runBtn.addEventListener('click', async () => {
-            const code = codeTextarea.value;
-            const response = await fetch('/run-python', {
-                method: 'POST',
-                headers: { 'Content-Type': 'text/plain' },
-                body: code
-            });
-            const output = await response.text();
-            outputPre.innerText = output;
-        });
-    </script>
+    <h1 style="text-align: center;">Null</h1>
 </body>
 </html>
-
-
