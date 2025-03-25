@@ -25,10 +25,16 @@ document.addEventListener("DOMContentLoaded", () => {
                 for (let i = 1; i <= pdf.numPages; i++) {
                     const page = await pdf.getPage(i);
                     const content = await page.getTextContent();
-                    text += content.items.map(item => item.str).join(" ") + "\n\n";
+                    
+                    // 텍스트 정리 (줄바꿈 및 불필요한 공백 제거)
+                    let pageText = content.items.map(item => item.str).join(" ");
+                    pageText = pageText.replace(/\s+/g, " "); // 여러 개 공백 -> 한 개 공백
+                    pageText = pageText.replace(/(\.|\?|!)\s*/g, "$1\n\n"); // 문장 끝나면 줄바꿈
+                    
+                    text += pageText + "\n\n";
                 }
 
-                content.textContent = text;
+                content.textContent = text.trim();
                 content.classList.remove("hidden");
             };
             reader.readAsArrayBuffer(file);
@@ -63,3 +69,4 @@ document.addEventListener("DOMContentLoaded", () => {
         content.style.lineHeight = lineHeight.value;
     });
 });
+    

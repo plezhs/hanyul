@@ -48,5 +48,7 @@ body {
     font-size: 18px;
     line-height: 1.5;
     white-space: pre-wrap;
+    word-wrap: break-word; /* 자동 줄 바꿈 추가 */
+    word-break: keep-all;   /* 단어가 어색하게 끊기는 것 방지 */
     cursor: pointer;
 }
