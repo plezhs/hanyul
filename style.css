@@ -1,0 +1,54 @@
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+#ui {
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+}
+
+#fileInput {
+    display: block;
+    margin-bottom: 10px;
+}
+
+#toggleSettings {
+    margin-top: 10px;
+}
+
+#settings {
+    margin-top: 10px;
+    padding: 10px;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 5px;
+}
+
+.hidden {
+    display: none;
+}
+
+#content {
+    width: 90%;
+    height: 90%;
+    overflow-y: auto;
+    padding: 20px;
+    font-size: 18px;
+    line-height: 1.5;
+    white-space: pre-wrap;
+    word-wrap: break-word; /* 자동 줄 바꿈 추가 */
+    word-break: keep-all;   /* 단어가 어색하게 끊기는 것 방지 */
+    cursor: pointer;
+}
