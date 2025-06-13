@@ -3,37 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>test</title>
-    <link rel="stylesheet" href="style.css">
-    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.16.105/pdf.min.js"></script> -->
+    <title>Image and Video Display</title>
+    <!-- <link rel="stylesheet" href="style.css"> -->
 </head>
-<body id="body">
-
-    <!-- <div id="ui">
-        <input type="file" id="fileInput" accept=".pdf">
-        <button id="toggleSettings">설정</button>
-        <div id="settings" class="hidden">
-            <label>배경색: <input type="color" id="bgColor"></label>
-            <label>글자색: <input type="color" id="textColor"></label>
-            <label>글자 크기: <input type="range" id="fontSize" min="14" max="36" value="18"></label>
-            <label>줄 간격: <input type="range" id="lineHeight" min="1" max="3" step="0.1" value="1.5"></label>
-        </div>
-    </div>
-
-    <div id="content" class="hidden"></div>
-
-    <script src="script.js"></script> -->
-
+<body style="display: flex; flex-direction: column; align-items: center;">
     <div id="content">
-        <video id="videoPlayer" width="640" height="360" controls autoplay muted loop>
-            <source src="a.mp4" type="video/mp4">
+        <video id="videoPlayer" controls autoplay muted loop width="480">
+            <source src="j.mp4" type="video/mp4">
             브라우저가 video 태그를 지원하지 않습니다.
         </video>
     </div>
-
     <div id="content">
-        <img src="image.png" alt="image.png" width="640" height="360">
+        <img src="image.png" alt="image.png" width="480">
     </div>
-
 </body>
 </html>

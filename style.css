@@ -8,7 +8,7 @@ body {
     align-items: center;
     justify-content: center;
     height: 100vh;
-    overflow: hidden;
+    overflow: scroll;
     transition: background-color 0.3s, color 0.3s;
 }
 
@@ -43,7 +43,7 @@ body {
 #content {
     width: 90%;
     height: 90%;
-    overflow-y: auto;
+    overflow-y: scroll;
     padding: 20px;
     font-size: 18px;
     line-height: 1.5;
